@@ -7,6 +7,23 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+// Solution 1 (my solution the easy way)
+// function palindrome(str) {
+//   return str === str.split("").reverse().join("");
+// }
+
+// Solution 2 (my solution the hard way)
+// function palindrome(str) {
+//   let reversed = str.split("").reduce((rev, char) => char + rev, "");
+//   return str === reversed;
+// }
+
+// Solution 3 (his way using .every())
+// .every() does a boolean check on EVERY element in array ie. array.every(val => val>5) (is every value in the array greater than 5?)
+function palindrome(str) {
+  return str.split("").every((char, idx) => {
+    return char === str[str.length - idx - 1];
+  });
+}
 
 module.exports = palindrome;
