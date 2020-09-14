@@ -71,5 +71,6 @@ function chunk(array, size) {
 /*
 Notice that we use the .slice() method here to extract portions of the array as chunks as well as reduce the size of the original array continuously until the terminating condition is met.
 */
+// https://scotch.io/courses/the-ultimate-guide-to-javascript-algorithms/array-chunking
 
 module.exports = chunk;
