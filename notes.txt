@@ -1,0 +1,56 @@
+RUNTIME COMPLEXITY
+-Describes the performance of an algorithm.
+-How much more processing power/time is required to run  your algorithm if we double the inputs?
+
+-Reverse string algorithm is a linear runtime or "N"
+-For each additional character = 1 step through 1 loop.
+
+-The steps algorithm is a quadratic runtime or N^2.
+-As n increased by one, we had to wayyy more stuff, or n*n things total
+
+DIFFERENT RUNTIMES:
+-Constant time: 1
+- No matter how many elements we're working with, the algorithm/operation/whatever will always take the same amount of time.
+-Seen as the "holy grail".
+-Some interviewers might ask a question and there is a uber easy solution, but then they'll ask for the constant time solution.
+
+-Logarithmic time: log(n)
+-You have this if doubling the number of elements you are iterating over doesn't double the amount of work.
+-Always assume that searching operations are log(n)
+
+-Linear time: n
+-Iterating through all elements in a collection of data.
+-If you see a for loop spanning from "0" to "array.length", you probably have "n", or linear runtime.
+
+-Quasi-linear time: n * log(n)
+-You have this if doubling the number of elements you are iterating over doesn't double the amount of work.
+-Always assume that any sorting operation is n*log(n)
+
+-Quadratic time: n^2
+-Every element in a collection has to be compared to every other element. The "handshake problem".
+
+-Exponential time: 2^n
+-If you add a SINGLE element to a collection, the processing power required doubles.
+-Want to avoid this one at all costs!!!
+
+(These are not the ONLY runtimes, other runtimes exist, but in general for whiteboarding questions, the algorithm will fall under one of these categories (or some combo of two))
+
+-Big "O" Notation
+-They might ask "What is the runtime complexity of your solution?" === "What is the Big O of your solution?"
+-Both asking "What is the efficiency of your solution?", what is the runtime?
+- O(n) -> Linear
+- O(1) -> Constant
+- O(n^2) -> Quadratic
+
+IDENTIFYING RUNTIME COMPLEXITY
+-Iterating with a simple for loop through a single collection? -> Probably O(n)
+-Iterating through half a collection? -> Still O(n). There are no constants in runtime. (a constant is double or half or 1.5)
+-Iterating through two DIFFERENT collections with separate for loops? -> O(n + m)
+-Two nested for loops iterating over the same collection? -> O(n^2)
+-Two nested for loops iterating over different collections? -> O(n * m)
+-Sorting? -> O(n*log(n))
+
+SPACE COMPLEXITY
+-Might be asked the space complexity of an algorithm.
+-Space complexity is extremely similar to performance but it is a reference to how much RAM or memory or space and algorithm needs to complete a task
+-For the most part can apply general rules of runtime complexity to space complexity
