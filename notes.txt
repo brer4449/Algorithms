@@ -54,3 +54,19 @@ SPACE COMPLEXITY
 -Might be asked the space complexity of an algorithm.
 -Space complexity is extremely similar to performance but it is a reference to how much RAM or memory or space and algorithm needs to complete a task
 -For the most part can apply general rules of runtime complexity to space complexity
+
+DATA STRUCTURES
+-Ways of organizing information with optimal "runtime complexity" for adding or removing records
+-JS natively implements several data structures. 
+!!!IMPORTANT!!!
+-YOU WILL BE ASKED ABOUT "INFERIOR" DATA STRUCTURES.
+-What's meant by that is in JS array functionality is VAST, very powerful, but we will still be asked to build a queue (not very efficient)
+-Going to make an array out of a queue...
+-Queues can be thought of as a container of sorts, where records or pieces of data enter on one end of the container and exit on the other side. Like a line of people buying tickets.
+-No skipping/cutting in line! The order in which you enter the queue is the order in which you exit it
+-Process of adding a record is called adding a record or ENQUEUING 
+-Process of removing a record is called removing a record or DEQUEUING 
+-FIFO-> First in First out
+-Using array methods: adding to the front of an array -> array.unshift() and removing from the end of an array -> array.pop()
+-A common way to work with queues is to make a class  and inside that class initialize an empty array, from there we're going to limit our array to just the unshift and pop methods, renamed as add and remove. 
+-This is done because the interviewer is telling us to, but also that way the functionality of the queue is explicit, for both ourselves and future coders. By removing the additional array methods via class, we are spelling out that "this is a queue, and you can't do array methods on it".

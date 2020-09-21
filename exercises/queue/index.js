@@ -8,6 +8,20 @@
 //     q.add(1);
 //     q.remove(); // returns 1;
 
-class Queue {}
+class Queue {
+  // defining a function called constructor, constructor will automatically be called when we create a new instance of the class
+  constructor() {
+    // can be called ANYTHING, doesn't need to be data
+    this.data = [];
+  }
+
+  add(record) {
+    this.data.unshift(record);
+  }
+
+  remove(record) {
+    return this.data.pop(record);
+  }
+}
 
 module.exports = Queue;
