@@ -56,6 +56,7 @@ SPACE COMPLEXITY
 -For the most part can apply general rules of runtime complexity to space complexity
 
 DATA STRUCTURES
+QUEUES
 -Ways of organizing information with optimal "runtime complexity" for adding or removing records
 -JS natively implements several data structures. 
 !!!IMPORTANT!!!
@@ -70,3 +71,8 @@ DATA STRUCTURES
 -Using array methods: adding to the front of an array -> array.unshift() and removing from the end of an array -> array.pop()
 -A common way to work with queues is to make a class  and inside that class initialize an empty array, from there we're going to limit our array to just the unshift and pop methods, renamed as add and remove. 
 -This is done because the interviewer is telling us to, but also that way the functionality of the queue is explicit, for both ourselves and future coders. By removing the additional array methods via class, we are spelling out that "this is a queue, and you can't do array methods on it".
+
+STACKS
+-Stacks are similar to queues. To add a record we push it on/in and to remove a record we pop it out.
+-The big difference between stacks and queues is the order of how items are added or removed. Instead of FIFO we have FILO
+-FILO -> First in Last out
