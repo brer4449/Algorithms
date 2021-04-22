@@ -23,7 +23,6 @@
 //   }
 //   return true;
 // }
-// https://www.indeed.com/career-advice/finding-a-job/explaining-job-search-barriers?from=career_guide_email&isid=careeradvice-us&ikw=career_guide_newsletter_2020_09_09_jsx_for_cg_us_template_b&utm_campaign=jsx_for_cg&utm_source=jobseeker_email&utm_medium=email
 
 // function buildCharMap(str) {
 //   const charMap = {};
