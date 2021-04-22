@@ -76,3 +76,14 @@ STACKS
 -Stacks are similar to queues. To add a record we push it on/in and to remove a record we pop it out.
 -The big difference between stacks and queues is the order of how items are added or removed. Instead of FIFO we have FILO
 -FILO -> First in Last out
+
+LINKED LISTS
+-A list of linked nodes. Often referred to as a "chain" or a "chain of nodes" that are strung together.
+-The list of nodes that form this chain has an order that is always maintained
+-The order of nodes in a linked list won't suddenly or randomly change (unless we specifically want to change it).
+-In every linked list, there are always two special nodes: the "head" node which is always the first node of a linked list and the "tail" node which is always the very last node.
+-The tail node can always be identified by the fact that it does not have a reference to any other node
+-Two parts to a node, the data, which can be anything we want (str, num, array, obj, etc. (any type of valid JS value)) can be contained in one these nodes.
+-The second part of a node is the reference to the next part of the chain.
+eg: nodeOne.next = nodeTwo
+-This is a chain right here, nodeOne is the head and nodeTwo is the tail.

@@ -6,39 +6,37 @@
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
-// Solution 1 using .reverse() (booooo, this one SUCKS, so boring, probs won't let you use .reverse() anyway)
+// Solution 1 (LAME)
 // function reverse(str) {
 //   return str.split("").reverse().join("");
 // }
 
-// Solution 2 (came up with on own)
-// function reverse(str) {
-//   let reversed = [];
-//   let strAsArray = str.split("");
-//   for (let i = strAsArray.length - 1; i >= 0; i--) {
-//     reversed.push(strAsArray[i]);
-//   }
-//   return reversed.join("");
-// }
-
-// Solution 2 (his version which is better...)
+// Solution 2 my way
 // function reverse(str) {
 //   let reversed = "";
-//   for (character of str) {
-//     reversed = character + reversed;
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     reversed += str[i];
+//   }
+//   return reversed;
+// }
+// his way
+// function reverse(str) {
+//   let reversed = "";
+//   for (let char of str) {
+//     reversed = char + reversed;
 //   }
 //   return reversed;
 // }
 
-// Solution 3 (his solution, more complicated using Array reduce helper function)
+// Solution 3
 function reverse(str) {
-  debugger;
-  // rev is the accumulator and char is the current value
-  return str.split("").reduce((rev, char) => char + rev, "");
+  // reduce takes two arguments, a function and a starting value
+  return str.split("").reduce((reversed, character) => {
+    return character + reversed;
+  }, "");
+  // whenever reduce runs, it takes the starting argument, pass it into the arrow function as the first argument, and then whatever gets returned from that function will then be used as the starting argument for every successive run of the function
+  // in total the function runs one time for every element in the array
+  // named arguments as such because the first one passed in is our reversed string, the second one passed in is the character we're operating on out of our array
 }
-
-// when using debugger, it pauses the function so we can see where things went wrong, must also call the function manually when running debugger
-// to run debugger, need to cd into that directory and run "node inspect index.js"
-reverse("asdfion");
 
 module.exports = reverse;

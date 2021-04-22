@@ -8,17 +8,14 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
-// My failed attempt
+// My solution, everything working but negative numbers
 // function reverseInt(n) {
-//   if (Math.sign(n) === 1) {
-//     n.toString()
-//       .split("")
-//       .reduce((rev, char) => char + rev, "");
-//   } else if (Math.sign(n) === -1) {
-//     `-${n
-//       .toString()
-//       .split("")
-//       .reduce((rev, char) => char + rev, "")}`;
+//   if (Math.sign(n) === -1) {
+//     n * -1;
+//     parseInt(n.toString().split("").reverse().join(""));
+//     return n * -1;
+//   } else {
+//     return parseInt(n.toString().split("").reverse().join(""));
 //   }
 // }
 
@@ -26,5 +23,6 @@
 function reverseInt(n) {
   const reversed = n.toString().split("").reverse().join("");
   return parseInt(reversed) * Math.sign(n);
+  // look at the docs of sign() you lazy butthole
 }
 module.exports = reverseInt;
